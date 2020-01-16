@@ -14,7 +14,7 @@ $(OBJ): $(SRC)
 	$(CC) $@ -o $(PROJECT)
 	./$(PROJECT)
 
-clean: $(OBJ) $(PROJECT)
-	rm $<
+clean: $(OBJ)
+	rm $< $(PROJECT)
 
 .PHONY: clean
