@@ -11,14 +11,10 @@ PROJECT = main
 
 $(OBJ): $(SRC)
 	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $@ -o $(PROJECT)
+	./$(PROJECT)
 
-$(PROJECT): $(OBJ)
-	$(CC) $(CFLAGS) $< -o $@
-
-run: $(PROJECT)
-	$<
-
-clean: $(OBJ)
+clean: $(OBJ) $(PROJECT)
 	rm $<
 
 .PHONY: clean
